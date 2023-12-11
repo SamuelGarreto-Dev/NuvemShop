@@ -6,11 +6,11 @@ class GerenciadorProdutos:
     def __init__(self, dbname, user, password, host, port):
         # Conectar ao banco de dados PostgreSQL
         self.conn = psycopg2.connect(
-            dbname='----',
-            user='----',
-            password='----',
+            dbname = 'NuvemShop',
+            user = 'samuel',
+            password = '0000',
             host = 'localhost',
-            port = 0000
+            port = 5432
         )
         self.criar_tabela()
 
@@ -42,7 +42,7 @@ class GerenciadorProdutos:
             with self.conn.cursor() as cursor:
                 cursor.execute(query, (nome, preco, quantidade))
                 self.conn.commit()
-            messagebox.showinfo("Informação", "Produto cadastrado com sucesso!")
+            messagebox.showinfo("Informação", f"Produto cadastrado com sucesso!")
             return
         else:
             messagebox.showinfo("Erro", f"Produto {nome} já cadastrado. Utilize a opção de alterar para modificar as informações.")

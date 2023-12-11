@@ -4,11 +4,11 @@ import tkinter.messagebox as messagebox
 
 def main():
     # Preencha com suas informações locais do PostgreSQL
-    dbname = '----'
-    user = '----'
-    password = '----'
-    host = 'localhost'
-    port = 0000
+    dbname = 'NuvemShop',
+    user = 'samuel',
+    password = '0000',
+    host = 'localhost',
+    port = 5432
 
     # Crie uma instância do GerenciadorProdutos com as informações de conexão
     gerenciador = GerenciadorProdutos(dbname, user, password, host, port)
